@@ -2,7 +2,7 @@ import { increment, decrement } from '../actions'
 
 const initialState = { value: 0 }
 
-export default (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
         case increment:
             return { value: state.value + 1 }
@@ -12,3 +12,5 @@ export default (state = initialState, action) => {
             return state
     }
 }
+
+export default reducer;
